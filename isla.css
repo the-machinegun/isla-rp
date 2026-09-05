@@ -1,1 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Satisfy&display=swap');
 
+.isla {
+    width: 370px;
+    height: 895px;
+    box-sizing: border-box;
+    border: 4px solid #737373;
+    border-radius: 23px;
+    background: transparent;
+    padding-top: 25px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.isla-top,
+.isla-seam,
+.isla-bottom {
+    width: 325px;
+    height: 35px;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 1;
+    text-shadow: 0 0 12px rgba(0,0,0,.5);
+}
+
+.isla-top,
+.isla-bottom {
+    position: relative;
+    z-index: 2;
+    font: 120px/1 'Just Another Hand', cursive;
+}
+
+.isla-top {
+    margin-bottom: 5px;
+    transform: translateY(2px) scaleY(.75);
+}
+
+.isla-img,
+.isla-small img {
+    box-sizing: border-box;
+    border: 3px solid #737373;
+    border-radius: 10px;
+}
+
+.isla-img {
+    width: 280px;
+    height: 181px;
+    object-fit: fill;
+}
+
+.isla-small {
+    width: 280px;
+    height: 135px;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.isla-small img {
+    width: 135px;
+    height: 135px;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%);
+}
+
+.isla-seam {
+    font: italic 220px/1 Satisfy, cursive;
+    position: absolute;
+    top: 220px;
+    z-index: 3;
+    transform: translateY(15px) scaleY(1.2);
+    pointer-events: none;
+}
+
+.isla-bottom {
+    margin-top: -23px;
+    margin-bottom: 10px;
+    transform: translateY(-3px) scaleY(.75);
+}
+
+.isla-text {
+    width: 325px;
+    height: 305px;
+    box-sizing: border-box;
+    padding: 12px 16px 0 12px;
+    background: transparent;
+    text-align: justify;
+    overflow: auto;
+    margin-top: 10px;
+}
+
+.isla-text::-webkit-scrollbar {
+    width: 10px;
+}
+
+.isla-text::-webkit-scrollbar-track {
+    background: transparent;
+    border: 2px solid #737373;
+    border-radius: 10px;
+}
+
+.isla-text::-webkit-scrollbar-thumb {
+    background: #737373;
+    border-radius: 10px;
+}
+
+.isla-spotify {
+    width: 280px;
+    height: 85px;
+    margin-top: 20px;
+}
+
+.isla-spotify iframe {
+    width: 100%;
+    height: 85px;
+    border: 0;
+}
