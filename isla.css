@@ -1,123 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
 
-.isla {
-    width: 370px;
-    height: 895px;
-    box-sizing: border-box;
-    border: 4px solid #737373;
-    border-radius: 23px;
-    background: transparent;
-    padding-top: 25px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
+.isla{
+    width:680px;height:505px;box-sizing:border-box;padding:10px;margin:auto;
+    border:3px solid #737373;border-radius:23px;overflow:hidden;
+    background:url('https://www.pngplay.com/wp-content/uploads/12/Scratches-PNG-Pic-Background.png') center/cover no-repeat;
+    box-shadow:0 2px 2px rgba(255,255,255,.16),0 8px 12px rgba(0,0,0,.78),0 18px 28px rgba(0,0,0,.58)
 }
 
-.isla-top,
-.isla-seam,
-.isla-bottom {
-    width: 325px;
-    height: 35px;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    line-height: 1;
-    text-shadow: 0 0 12px rgba(0,0,0,.5);
+.isla-row{width:660px;height:485px;display:flex;gap:10px;align-items:flex-start}
+
+.isla-left{
+    width:325px;height:485px;display:flex;flex-direction:column;
+    align-items:center;position:relative
 }
 
-.isla-top,
-.isla-bottom {
-    position: relative;
-    z-index: 2;
-    font: 120px/1 'Just Another Hand', cursive;
+.isla-top,.isla-seam,.isla-bottom{
+    width:325px;height:35px;font-family:'Just Another Hand',cursive;
+    line-height:1;text-align:center;white-space:nowrap;
+    text-shadow:0 2px 2px rgba(0,0,0,.95),0 4px 5px rgba(0,0,0,.85),0 7px 12px rgba(0,0,0,.65)
 }
 
-.isla-top {
-    margin-bottom: 5px;
-    transform: translateY(2px) scaleY(.75);
+.isla-top,.isla-bottom{color:#fff;font-size:120px;position:relative;z-index:2}
+.isla-top{margin-bottom:5px;transform:translateY(2px) scaleY(.75)}
+.isla-bottom{margin-top:-23px;transform:translateY(-3px) scaleY(.75)}
+
+.isla-image-block{
+    width:280px;height:326px;position:relative;
+    filter:drop-shadow(0 1px 1px rgba(255,255,255,.35))
+           drop-shadow(0 10px 9px rgba(0,0,0,.95))
+           drop-shadow(0 19px 22px rgba(0,0,0,.75))
 }
 
-.isla-img,
-.isla-small img {
-    box-sizing: border-box;
-    border: 3px solid #737373;
-    border-radius: 10px;
+.isla-img,.isla-small-wrap>img:first-child{
+    box-sizing:border-box;border:3px solid #737373;border-radius:10px
 }
 
-.isla-img {
-    width: 280px;
-    height: 181px;
-    object-fit: fill;
+.isla-img{width:280px;height:181px;display:block}
+
+.isla-small{width:280px;height:135px;display:flex;gap:10px;margin-top:10px}
+
+.isla-small-wrap{
+    width:135px;height:135px;position:relative;overflow:hidden;border-radius:10px
 }
 
-.isla-small {
-    width: 280px;
-    height: 135px;
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
+.isla-small-wrap>img:first-child{
+    width:135px;height:135px;object-fit:cover;
+    filter:grayscale(100%) contrast(78%) brightness(92%) sepia(8%)
 }
 
-.isla-small img {
-    width: 135px;
-    height: 135px;
-    object-fit: cover;
-    object-position: center;
-    filter: grayscale(100%);
+.isla-grunge{
+    width:150px;height:150px;position:absolute;top:-7px;left:-7px;z-index:2;
+    object-fit:cover;opacity:.38;mix-blend-mode:multiply;
+    transform:rotate(180deg) scaleX(-1);pointer-events:none
 }
 
-.isla-seam {
-    font: italic 220px/1 Satisfy, cursive;
-    position: absolute;
-    top: 220px;
-    z-index: 3;
-    transform: translateY(15px) scaleY(1.2);
-    pointer-events: none;
+.isla-seam{
+    color:var(--seam-color);font-size:220px;font-style:italic;
+    -webkit-text-stroke:.15px #000;
+    position:absolute;top:195px;left:3px;z-index:3;
+    transform:translateY(-1px) scaleY(.75);pointer-events:none
 }
 
-.isla-bottom {
-    margin-top: -23px;
-    margin-bottom: 10px;
-    transform: translateY(-3px) scaleY(.75);
+.isla-spotify{width:280px;height:85px;margin-top:20px;overflow:hidden}
+.isla-spotify iframe{width:100%!important;height:85px!important;display:block;border:0}
+
+.isla-text{
+    width:325px;height:475px;box-sizing:border-box;padding:12px 16px 12px 12px;
+    align-self:center;text-align:justify;overflow:auto
 }
 
-.isla-text {
-    width: 325px;
-    height: 305px;
-    box-sizing: border-box;
-    padding: 12px 16px 0 12px;
-    background: transparent;
-    text-align: justify;
-    overflow: auto;
-    margin-top: 10px;
+.isla-text::-webkit-scrollbar{width:7px}
+
+.isla-text::-webkit-scrollbar-track,
+.isla-text::-webkit-scrollbar-thumb{
+    border:1px solid #737373;border-radius:10px
 }
 
-.isla-text::-webkit-scrollbar {
-    width: 10px;
-}
+.isla-text::-webkit-scrollbar-track{background:rgba(0,0,0,.18)}
 
-.isla-text::-webkit-scrollbar-track {
-    background: transparent;
-    border: 2px solid #737373;
-    border-radius: 10px;
-}
-
-.isla-text::-webkit-scrollbar-thumb {
-    background: #737373;
-    border-radius: 10px;
-}
-
-.isla-spotify {
-    width: 280px;
-    height: 85px;
-    margin-top: 20px;
-}
-
-.isla-spotify iframe {
-    width: 100%;
-    height: 85px;
-    border: 0;
+.isla-text::-webkit-scrollbar-thumb{
+    background:#565656;
+    box-shadow:inset 0 0 3px rgba(0,0,0,.55),0 0 3px rgba(0,0,0,.45)
 }
