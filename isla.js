@@ -1,11 +1,12 @@
 (()=>{
 const G='https://www.pngplay.com/wp-content/uploads/12/Scratches-PNG-Pic-Background.png';
 
-function fit(e,s){
-    while(e&&s>8){
-        e.style.fontSize=s+'px';
-        if(e.scrollWidth<=e.clientWidth)break;
-        s--;
+function fit(e){
+    if(!e)return;
+    let s=parseFloat(getComputedStyle(e).fontSize);
+
+    while(s>8&&e.scrollWidth>e.clientWidth){
+        e.style.fontSize=--s+'px';
     }
 }
 
@@ -59,12 +60,9 @@ function build(p){
 const posts=[...document.querySelectorAll('.isla-post')].map(build);
 
 function sizeLyrics(){
-    posts.forEach(p=>{
-        p.querySelectorAll('.isla-top,.isla-bottom')
-            .forEach(e=>fit(e,105.88));
-
-        fit(p.querySelector('.isla-seam'),194.12);
-    });
+    posts.forEach(p=>
+        p.querySelectorAll('.isla-top,.isla-seam,.isla-bottom').forEach(fit)
+    );
 }
 
 if(document.fonts?.ready)document.fonts.ready.then(sizeLyrics);
