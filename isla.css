@@ -1,109 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
 
 .isla{
-    width:600px;height:505px;box-sizing:border-box;
-    padding:10px 8.82px;margin:auto;
-    border:3px solid #737373;border-radius:23px;overflow:hidden;
+    width:580px;height:430.74px;box-sizing:border-box;
+    padding:8.53px;margin:auto;
+    border:2.56px solid #737373;border-radius:19.62px;overflow:hidden;
     background:url('https://www.pngplay.com/wp-content/uploads/12/Scratches-PNG-Pic-Background.png') center/cover no-repeat;
     display:flex;flex-direction:column;align-items:center;
-    box-shadow:0 2px 2px rgba(255,255,255,.16),0 8px 12px rgba(0,0,0,.78),0 18px 28px rgba(0,0,0,.58)
+    box-shadow:0 1.71px 1.71px rgba(255,255,255,.16),0 6.82px 10.24px rgba(0,0,0,.78),0 15.35px 23.88px rgba(0,0,0,.58)
 }
 
 .isla-row{
-    width:582.35px;height:485px;
-    display:flex;gap:8.82px;align-items:flex-start
+    width:562.94px;height:413.68px;
+    display:flex;gap:8.53px;align-items:flex-start
 }
 
 .isla-left{
-    width:286.76px;height:485px;
+    width:277.21px;height:413.68px;
     display:flex;flex-direction:column;align-items:center;position:relative
 }
 
 .isla-top,.isla-seam,.isla-bottom{
-    width:286.76px;height:35px;
+    width:277.21px;height:29.85px;
     font-family:'Just Another Hand',cursive;
     line-height:1;text-align:center;white-space:nowrap;
-    text-shadow:0 2px 2px rgba(0,0,0,.95),0 4px 5px rgba(0,0,0,.85),0 7px 12px rgba(0,0,0,.65)
+    text-shadow:0 1.71px 1.71px rgba(0,0,0,.95),0 3.41px 4.26px rgba(0,0,0,.85),0 5.97px 10.24px rgba(0,0,0,.65)
 }
 
 .isla-top,.isla-bottom{
-    color:#fff;font-size:105.88px;position:relative;z-index:2
+    color:#fff;font-size:102.35px;position:relative;z-index:2
 }
 
 .isla-top{
-    margin-bottom:5px;
-    transform:translateY(2px) scaleY(.75)
+    margin-bottom:4.26px;
+    transform:translateY(1.71px) scaleY(.75)
 }
 
 .isla-bottom{
-    margin-top:-23px;
-    transform:translateY(-3px) scaleY(.75)
+    margin-top:-19.62px;
+    transform:translateY(-2.56px) scaleY(.75)
 }
 
 .isla-image-block{
-    width:247.06px;height:326px;position:relative;
-    filter:drop-shadow(0 1px 1px rgba(255,255,255,.35))
-           drop-shadow(0 10px 9px rgba(0,0,0,.95))
-           drop-shadow(0 19px 22px rgba(0,0,0,.75))
+    width:238.82px;height:278.06px;position:relative;
+    filter:drop-shadow(0 .85px .85px rgba(255,255,255,.35))
+           drop-shadow(0 8.53px 7.68px rgba(0,0,0,.95))
+           drop-shadow(0 16.21px 18.76px rgba(0,0,0,.75))
 }
 
 .isla-img,.isla-small-wrap>img:first-child{
-    box-sizing:border-box;border:3px solid #737373;border-radius:10px
+    box-sizing:border-box;border:2.56px solid #737373;border-radius:8.53px
 }
 
 .isla-img{
-    width:247.06px;height:181px;display:block
+    width:238.82px;height:154.38px;display:block
 }
 
 .isla-small{
-    width:247.06px;height:135px;
-    display:flex;gap:8.82px;margin-top:10px
+    width:238.82px;height:115.15px;
+    display:flex;gap:8.53px;margin-top:8.53px
 }
 
 .isla-small-wrap{
-    width:119.12px;height:135px;
-    position:relative;overflow:hidden;border-radius:10px
+    width:115.15px;height:115.15px;
+    position:relative;overflow:hidden;border-radius:8.53px
 }
 
 .isla-small-wrap>img:first-child{
-    width:119.12px;height:135px;object-fit:cover;
+    width:115.15px;height:115.15px;object-fit:cover;
     filter:grayscale(100%) contrast(78%) brightness(92%) sepia(8%)
 }
 
 .isla-grunge{
-    width:132.35px;height:150px;
-    position:absolute;top:-7px;left:-6.18px;z-index:2;
+    width:127.94px;height:127.94px;
+    position:absolute;top:-5.97px;left:-5.97px;z-index:2;
     object-fit:cover;opacity:.38;mix-blend-mode:multiply;
     transform:rotate(180deg) scaleX(-1);pointer-events:none
 }
 
 .isla-seam{
     color:var(--seam-color);
-    font-size:194.12px;font-style:italic;
+    font-size:187.65px;font-style:italic;
     -webkit-text-stroke:.13px #000;
-    position:absolute;top:195px;left:2.65px;z-index:3;
-    transform:translateY(-1px) scaleY(.75);pointer-events:none
+    position:absolute;top:166.32px;left:2.56px;z-index:3;
+    transform:translateY(-.85px) scaleY(.75);pointer-events:none
 }
 
 .isla-spotify{
-    width:247.06px;height:85px;margin-top:20px;overflow:hidden
+    width:238.82px;height:72.5px;margin-top:17.06px;overflow:hidden
 }
 
 .isla-spotify iframe{
-    width:100%!important;height:85px!important;display:block;border:0
+    width:100%!important;height:72.5px!important;display:block;border:0
 }
 
 .isla-text{
-    width:286.76px;height:475px;box-sizing:border-box;
-    padding:12px 14.12px 12px 10.59px;
+    width:277.21px;height:405.15px;box-sizing:border-box;
+    padding:10.24px 13.65px 10.24px 10.24px;
     align-self:center;text-align:justify;overflow:auto
 }
 
-.isla-text::-webkit-scrollbar{width:6.18px}
+.isla-text::-webkit-scrollbar{width:5.97px}
 
 .isla-text::-webkit-scrollbar-track,
 .isla-text::-webkit-scrollbar-thumb{
-    border:1px solid #737373;border-radius:10px
+    border:.85px solid #737373;border-radius:8.53px
 }
 
 .isla-text::-webkit-scrollbar-track{
@@ -112,5 +112,5 @@
 
 .isla-text::-webkit-scrollbar-thumb{
     background:#565656;
-    box-shadow:inset 0 0 3px rgba(0,0,0,.55),0 0 3px rgba(0,0,0,.45)
+    box-shadow:inset 0 0 2.56px rgba(0,0,0,.55),0 0 2.56px rgba(0,0,0,.45)
 }
