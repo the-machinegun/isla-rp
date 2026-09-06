@@ -1,26 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Just+Another+Hand&display=swap');
 
 .isla{
-    width:580px;height:430.74px;box-sizing:border-box;
-    padding:8.53px;margin:auto;
+    width:580px;height:429px;box-sizing:border-box;
+    padding:8.53px;margin:0 auto!important;
     border:2.56px solid #737373;border-radius:19.62px;overflow:hidden;
     background:url('https://www.pngplay.com/wp-content/uploads/12/Scratches-PNG-Pic-Background.png') center/cover no-repeat;
-    display:flex;flex-direction:column;align-items:center;
+    position:relative;clear:both;
     box-shadow:0 1.71px 1.71px rgba(255,255,255,.16),0 6.82px 10.24px rgba(0,0,0,.78),0 15.35px 23.88px rgba(0,0,0,.58)
 }
 
 .isla-row{
-    width:562.94px;height:413.68px;
-    display:flex;gap:8.53px;align-items:flex-start
+    width:100%;height:100%;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    gap:8.53px
 }
 
 .isla-left{
-    width:277.21px;height:413.68px;
-    display:flex;flex-direction:column;align-items:center;position:relative
+    width:100%;height:100%;
+    display:flex;flex-direction:column;align-items:center;
+    position:relative
 }
 
 .isla-top,.isla-seam,.isla-bottom{
-    width:277.21px;height:29.85px;
+    width:100%;height:29.85px;
     font-family:'Just Another Hand',cursive;
     line-height:1;text-align:center;white-space:nowrap;
     text-shadow:0 1.71px 1.71px rgba(0,0,0,.95),0 3.41px 4.26px rgba(0,0,0,.85),0 5.97px 10.24px rgba(0,0,0,.65)
@@ -41,18 +44,22 @@
 }
 
 .isla-image-block{
-    width:238.82px;height:278.06px;position:relative;
+    width:238.82px;height:272.94px;position:relative;
     filter:drop-shadow(0 .85px .85px rgba(255,255,255,.35))
            drop-shadow(0 8.53px 7.68px rgba(0,0,0,.95))
            drop-shadow(0 16.21px 18.76px rgba(0,0,0,.75))
 }
 
 .isla-img,.isla-small-wrap>img:first-child{
-    box-sizing:border-box;border:2.56px solid #737373;border-radius:8.53px
+    box-sizing:border-box;
+    border:2.56px solid #737373;
+    border-radius:8.53px
 }
 
 .isla-img{
-    width:238.82px;height:154.38px;display:block
+    width:228.59px;height:149.26px;
+    display:block;margin:0 auto;
+    object-fit:cover;object-position:center
 }
 
 .isla-small{
@@ -66,7 +73,8 @@
 }
 
 .isla-small-wrap>img:first-child{
-    width:115.15px;height:115.15px;object-fit:cover;
+    width:115.15px;height:115.15px;
+    object-fit:cover;object-position:center;
     filter:grayscale(100%) contrast(78%) brightness(92%) sepia(8%)
 }
 
@@ -81,29 +89,38 @@
     color:var(--seam-color);
     font-size:187.65px;font-style:italic;
     -webkit-text-stroke:.13px #000;
-    position:absolute;top:166.32px;left:2.56px;z-index:3;
-    transform:translateY(-.85px) scaleY(.75);pointer-events:none
+    position:absolute;top:161.2px;left:0;z-index:3;
+    transform:translateY(-.85px) scaleY(.75);
+    pointer-events:none
 }
 
 .isla-spotify{
-    width:238.82px;height:72.5px;margin-top:17.06px;overflow:hidden
+    width:238.82px;height:72.5px;
+    margin-top:17.06px;overflow:hidden
 }
 
 .isla-spotify iframe{
-    width:100%!important;height:72.5px!important;display:block;border:0
+    width:280px!important;height:85px!important;
+    display:block;border:0;
+    transform:scale(.85294);
+    transform-origin:top left
 }
 
 .isla-text{
-    width:277.21px;height:405.15px;box-sizing:border-box;
+    width:100%;
+    height:calc(100% - 8.53px);
+    box-sizing:border-box;
     padding:10.24px 13.65px 10.24px 10.24px;
-    align-self:center;text-align:justify;overflow:auto
+    align-self:center;
+    text-align:justify;overflow:auto
 }
 
 .isla-text::-webkit-scrollbar{width:5.97px}
 
 .isla-text::-webkit-scrollbar-track,
 .isla-text::-webkit-scrollbar-thumb{
-    border:.85px solid #737373;border-radius:8.53px
+    border:.85px solid #737373;
+    border-radius:8.53px
 }
 
 .isla-text::-webkit-scrollbar-track{
