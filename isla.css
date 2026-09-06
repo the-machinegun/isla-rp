@@ -2,16 +2,10 @@
 
 .isla{
     width:580px;height:429px;box-sizing:border-box;
-    padding:8.53px;margin:0!important;
+    padding:8.53px;margin:0;
     border:2.56px solid #737373;border-radius:19.62px;overflow:hidden;
     background:url('https://www.pngplay.com/wp-content/uploads/12/Scratches-PNG-Pic-Background.png') center/cover no-repeat;
-
-    display:block!important;
-    float:none!important;
-    position:relative;
-    left:50%;
-    transform:translateX(-50%);
-
+    position:relative;float:none!important;
     box-shadow:
         0 1.71px 1.71px rgba(255,255,255,.16),
         0 6.82px 10.24px rgba(0,0,0,.78),
@@ -57,8 +51,7 @@
 }
 
 .isla-image-block{
-    width:238.82px;height:272.94px;
-    position:relative;
+    width:238.82px;height:272.94px;position:relative;
     filter:
         drop-shadow(0 .85px .85px rgba(255,255,255,.35))
         drop-shadow(0 8.53px 7.68px rgba(0,0,0,.95))
@@ -74,76 +67,49 @@
 .isla-img{
     width:228.59px;height:149.26px;
     display:block;margin:0 auto;
-    object-fit:cover;
-    object-position:center
+    object-fit:cover;object-position:center
 }
 
 .isla-small{
     width:238.82px;height:115.15px;
-    display:flex;
-    gap:8.53px;
-    margin-top:8.53px
+    display:flex;gap:8.53px;margin-top:8.53px
 }
 
 .isla-small-wrap{
     width:115.15px;height:115.15px;
-    position:relative;
-    overflow:hidden;
-    border-radius:8.53px
+    position:relative;overflow:hidden;border-radius:8.53px
 }
 
 .isla-small-wrap>img:first-child{
     width:115.15px;height:115.15px;
-    object-fit:cover;
-    object-position:center;
-    filter:
-        grayscale(100%)
-        contrast(78%)
-        brightness(92%)
-        sepia(8%)
+    object-fit:cover;object-position:center;
+    filter:grayscale(100%) contrast(78%) brightness(92%) sepia(8%)
 }
 
 .isla-grunge{
     width:127.94px;height:127.94px;
-    position:absolute;
-    top:-5.97px;left:-5.97px;
-    z-index:2;
-    object-fit:cover;
-    opacity:.38;
-    mix-blend-mode:multiply;
-    transform:rotate(180deg) scaleX(-1);
-    pointer-events:none
+    position:absolute;top:-5.97px;left:-5.97px;z-index:2;
+    object-fit:cover;opacity:.38;mix-blend-mode:multiply;
+    transform:rotate(180deg) scaleX(-1);pointer-events:none
 }
 
 .isla-seam{
     color:var(--seam-color);
-    font-size:187.65px;
-    font-style:italic;
+    font-size:187.65px;font-style:italic;
     -webkit-text-stroke:.13px #000;
-
-    position:absolute;
-    top:161.2px;
-    left:0;
-    z-index:3;
-
+    position:absolute;top:161.2px;left:0;z-index:3;
     transform:translateY(-.85px) scaleY(.75);
     pointer-events:none
 }
 
 .isla-spotify{
-    width:238.82px;
-    height:72.5px;
-    margin-top:17.06px;
-    overflow:hidden
+    width:238.82px;height:72.5px;
+    margin-top:17.06px;overflow:hidden
 }
 
 .isla-spotify iframe{
-    width:280px!important;
-    height:85px!important;
-    display:block;
-    border:0;
-    overflow:hidden!important;
-
+    width:280px!important;height:85px!important;
+    display:block;border:0;overflow:hidden!important;
     transform:scale(.85294);
     transform-origin:top left
 }
@@ -152,17 +118,11 @@
     width:100%;
     height:calc(100% - 8.53px);
     box-sizing:border-box;
-
     padding:10.24px 13.65px 10.24px 10.24px;
-
-    align-self:center;
-    text-align:justify;
-    overflow:auto
+    align-self:center;text-align:justify;overflow:auto
 }
 
-.isla-text::-webkit-scrollbar{
-    width:5.97px
-}
+.isla-text::-webkit-scrollbar{width:5.97px}
 
 .isla-text::-webkit-scrollbar-track,
 .isla-text::-webkit-scrollbar-thumb{
