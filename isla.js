@@ -4,7 +4,7 @@ const G='https://www.pngplay.com/wp-content/uploads/12/Scratches-PNG-Pic-Backgro
 function fit(e,s){
     while(e&&s>8){
         e.style.fontSize=s+'px';
-        if(e.scrollWidth<=325)break;
+        if(e.scrollWidth<=e.clientWidth)break;
         s--;
     }
 }
@@ -21,33 +21,29 @@ function build(p){
     <div class="isla-row">
         <div class="isla-left">
             <div class="isla-top"></div>
-
             <div class="isla-image-block">
                 <img class="isla-img">
                 <div class="isla-small">
                     <div class="isla-small-wrap">
                         <img>
-                        <img class="isla-grunge grunge-two" src="${G}">
+                        <img class="isla-grunge" src="${G}">
                     </div>
                     <div class="isla-small-wrap">
                         <img>
-                        <img class="isla-grunge grunge-two" src="${G}">
+                        <img class="isla-grunge" src="${G}">
                     </div>
                 </div>
             </div>
-
             <div class="isla-seam"></div>
             <div class="isla-bottom"></div>
             <div class="isla-spotify"></div>
         </div>
-
         <div class="isla-text"></div>
     </div>`;
 
     p.querySelector('.isla-top').textContent=d.top;
     p.querySelector('.isla-seam').textContent=d.middle;
     p.querySelector('.isla-bottom').textContent=d.bottom;
-
     p.querySelector('.isla-img').src=d.main;
 
     const squares=p.querySelectorAll('.isla-small-wrap>img:first-child');
@@ -64,11 +60,13 @@ const posts=[...document.querySelectorAll('.isla-post')].map(build);
 
 function sizeLyrics(){
     posts.forEach(p=>{
-        p.querySelectorAll('.isla-top,.isla-bottom').forEach(e=>fit(e,120));
-        fit(p.querySelector('.isla-seam'),220);
+        p.querySelectorAll('.isla-top,.isla-bottom')
+            .forEach(e=>fit(e,114.71));
+
+        fit(p.querySelector('.isla-seam'),210.29);
     });
 }
 
-if(document.fonts?.ready) document.fonts.ready.then(sizeLyrics);
+if(document.fonts?.ready)document.fonts.ready.then(sizeLyrics);
 else sizeLyrics();
 })();
