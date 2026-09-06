@@ -61,9 +61,9 @@ const posts=[...document.querySelectorAll('.isla-post')].map(build);
 function sizeLyrics(){
     posts.forEach(p=>{
         p.querySelectorAll('.isla-top,.isla-bottom')
-            .forEach(e=>fit(e,114.71));
+            .forEach(e=>fit(e,105.88));
 
-        fit(p.querySelector('.isla-seam'),210.29);
+        fit(p.querySelector('.isla-seam'),194.12);
     });
 }
 
