@@ -1,12 +1,12 @@
-function fitLyric(el, size) {
-    while (size > 8) {
-        el.style.fontSize = size + 'px';
-        if (el.scrollWidth <= 325) break;
-        size--;
+function fit(e,s){
+    while(s>8){
+        e.style.fontSize=s+'px';
+        if(e.scrollWidth<=325)break;
+        s--
     }
 }
 
-document.querySelectorAll('.isla-top, .isla-bottom')
-    .forEach(el => fitLyric(el, 120));
+document.querySelectorAll('.isla-top,.isla-bottom')
+    .forEach(e=>fit(e,120));
 
-fitLyric(document.querySelector('.isla-seam'), 220);
+fit(document.querySelector('.isla-seam'),220);
