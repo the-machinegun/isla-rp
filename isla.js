@@ -75,8 +75,7 @@ const posts=[...document.querySelectorAll('.isla-post')].map(build);
 
 function sizeLyrics(){
     posts.forEach(p=>
-        p.querySelectorAll('.isla-top,.isla-seam,.isla-bottom')
-            .forEach(fit)
+        p.querySelectorAll('.isla-top,.isla-seam,.isla-bottom').forEach(fit)
     );
 }
 
