@@ -3,6 +3,7 @@ const G='https://www.pngplay.com/wp-content/uploads/12/Scratches-PNG-Pic-Backgro
 
 function fit(e){
     if(!e)return;
+
     let s=parseFloat(getComputedStyle(e).fontSize);
 
     while(s>8&&e.scrollWidth>e.clientWidth){
@@ -22,23 +23,28 @@ function build(p){
     <div class="isla-row">
         <div class="isla-left">
             <div class="isla-top"></div>
+
             <div class="isla-image-block">
                 <img class="isla-img">
+
                 <div class="isla-small">
                     <div class="isla-small-wrap">
                         <img>
                         <img class="isla-grunge" src="${G}">
                     </div>
+
                     <div class="isla-small-wrap">
                         <img>
                         <img class="isla-grunge" src="${G}">
                     </div>
                 </div>
             </div>
+
             <div class="isla-seam"></div>
             <div class="isla-bottom"></div>
             <div class="isla-spotify"></div>
         </div>
+
         <div class="isla-text"></div>
     </div>`;
 
@@ -48,11 +54,19 @@ function build(p){
     p.querySelector('.isla-img').src=d.main;
 
     const squares=p.querySelectorAll('.isla-small-wrap>img:first-child');
+
     squares[0].src=d.one;
     squares[1].src=d.two;
 
     p.querySelector('.isla-spotify').innerHTML=spotify;
     p.querySelector('.isla-text').innerHTML=text;
+
+    const player=p.querySelector('.isla-spotify iframe');
+
+    if(player){
+        player.setAttribute('scrolling','no');
+        player.style.overflow='hidden';
+    }
 
     return p;
 }
@@ -61,10 +75,14 @@ const posts=[...document.querySelectorAll('.isla-post')].map(build);
 
 function sizeLyrics(){
     posts.forEach(p=>
-        p.querySelectorAll('.isla-top,.isla-seam,.isla-bottom').forEach(fit)
+        p.querySelectorAll('.isla-top,.isla-seam,.isla-bottom')
+            .forEach(fit)
     );
 }
 
-if(document.fonts?.ready)document.fonts.ready.then(sizeLyrics);
-else sizeLyrics();
+if(document.fonts?.ready){
+    document.fonts.ready.then(sizeLyrics);
+}else{
+    sizeLyrics();
+}
 })();
