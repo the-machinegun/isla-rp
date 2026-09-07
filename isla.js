@@ -1,13 +1,11 @@
 (()=>{
-const G='https://www.pngplay.com/wp-content/uploads/12/Scratches-PNG-Pic-Background.png';
+function fit(el){
+    if(!el)return;
 
-function fit(e){
-    if(!e)return;
+    let size=parseFloat(getComputedStyle(el).fontSize);
 
-    let s=parseFloat(getComputedStyle(e).fontSize);
-
-    while(s>8&&e.scrollWidth>e.clientWidth){
-        e.style.fontSize=--s+'px';
+    while(size>8&&el.scrollWidth>el.clientWidth){
+        el.style.fontSize=--size+'px';
     }
 }
 
@@ -17,49 +15,38 @@ function build(p){
     const text=p.querySelector('.isla-text')?.innerHTML||'';
 
     p.className='isla';
-    p.style.setProperty('--seam-color',d.color);
+    p.style.setProperty('--accent',d.color);
 
     p.innerHTML=`
-    <div class="isla-row">
-        <div class="isla-left">
-            <div class="isla-top"></div>
+        <div class="isla-lyric isla-lyric-one"></div>
 
-            <div class="isla-image-block">
-                <img class="isla-img">
-
-                <div class="isla-small">
-                    <div class="isla-small-wrap">
-                        <img>
-                        <img class="isla-grunge" src="${G}">
-                    </div>
-
-                    <div class="isla-small-wrap">
-                        <img>
-                        <img class="isla-grunge" src="${G}">
-                    </div>
-                </div>
-            </div>
-
-            <div class="isla-seam"></div>
-            <div class="isla-bottom"></div>
-            <div class="isla-spotify"></div>
+        <div class="isla-top-graphics">
+            <img class="isla-graphic isla-graphic-one">
+            <img class="isla-graphic isla-graphic-two">
         </div>
 
+        <div class="isla-lyric isla-lyric-two"></div>
+
+        <div class="isla-gap"></div>
+
         <div class="isla-text"></div>
-    </div>`;
 
-    p.querySelector('.isla-top').textContent=d.top;
-    p.querySelector('.isla-seam').textContent=d.middle;
-    p.querySelector('.isla-bottom').textContent=d.bottom;
-    p.querySelector('.isla-img').src=d.main;
+        <div class="isla-gap"></div>
 
-    const squares=p.querySelectorAll('.isla-small-wrap>img:first-child');
+        <div class="isla-bottom-row">
+            <img class="isla-graphic isla-graphic-three">
+            <div class="isla-spotify"></div>
+        </div>`;
 
-    squares[0].src=d.one;
-    squares[1].src=d.two;
+    p.querySelector('.isla-lyric-one').textContent=d.top;
+    p.querySelector('.isla-lyric-two').textContent=d.bottom;
 
-    p.querySelector('.isla-spotify').innerHTML=spotify;
+    p.querySelector('.isla-graphic-one').src=d.graphic1;
+    p.querySelector('.isla-graphic-two').src=d.graphic2;
+    p.querySelector('.isla-graphic-three').src=d.graphic3;
+
     p.querySelector('.isla-text').innerHTML=text;
+    p.querySelector('.isla-spotify').innerHTML=spotify;
 
     const player=p.querySelector('.isla-spotify iframe');
 
@@ -75,7 +62,7 @@ const posts=[...document.querySelectorAll('.isla-post')].map(build);
 
 function sizeLyrics(){
     posts.forEach(p=>
-        p.querySelectorAll('.isla-top,.isla-seam,.isla-bottom').forEach(fit)
+        p.querySelectorAll('.isla-lyric').forEach(fit)
     );
 }
 
