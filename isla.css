@@ -64,7 +64,7 @@
 
 .isla-text{
     width:453px;height:375px;box-sizing:border-box;
-    margin:0 auto;padding:12px 16px 12px 12px;
+    margin:0 auto;padding:12px 16px 12px 0;
     background:transparent;
     text-align:justify;
     overflow-y:auto;overflow-x:hidden
