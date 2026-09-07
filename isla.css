@@ -4,8 +4,21 @@
     width:491px;box-sizing:border-box;
     padding:0 15px 15px;margin:auto;overflow:hidden;
     border:3px solid var(--accent);border-radius:23px;
-    background:url('https://www.pngplay.com/wp-content/uploads/12/Scratches-PNG-Pic-Background.png') center/cover no-repeat;
+    position:relative;
     box-shadow:0 2px 2px rgba(255,255,255,.16),0 8px 12px rgba(0,0,0,.78),0 18px 28px rgba(0,0,0,.58)
+}
+
+.isla::before{
+    content:"";
+    position:absolute;inset:0;
+    background:url('https://www.pngplay.com/wp-content/uploads/12/Scratches-PNG-Pic-Background.png') center/cover no-repeat;
+    opacity:.7;
+    pointer-events:none
+}
+
+.isla > *{
+    position:relative;
+    z-index:1
 }
 
 .isla-lyric{
@@ -17,7 +30,7 @@
 }
 
 .isla-lyric-one{
-    transform:translateY(8px) scaleY(.75)
+    transform:translateY(-2px) scaleY(.75)
 }
 
 .isla-lyric-two{
@@ -63,7 +76,7 @@
 }
 
 .isla-lyric-two + .isla-gap{
-    height:20px
+    height:25px
 }
 
 .isla-text{
